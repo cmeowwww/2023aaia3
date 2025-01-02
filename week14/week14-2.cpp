@@ -2,15 +2,15 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode*ans=new ListNode(); //·Ç³Æ¦n·sªºµª®×
-        ListNode*now=ans; //²{¦b­n³B²zªºnode
+        ListNode*ans=new ListNode(); //æº–å‚™å¥½æ–°çš„ç­”æ¡ˆ
+        ListNode*now=ans; //ç¾åœ¨è¦è™•ç†çš„node
         int carry=0;
-        while(l1!=nullptr && l2!=nullptr){ //§âlist 1 ³£½Æ»s¨ìansªºnow¸Ì
+        while(l1!=nullptr && l2!=nullptr){ //æŠŠlist 1 éƒ½è¤‡è£½åˆ°ansçš„nowè£¡
             int here = l1->val+l2->val+carry;
             carry=here/10;
-            now->next=new ListNode(here%10);    //  ·s·Ç³Æ¤@­Ó·sªº­È
-            now = now->next;    //´«¤U¤@µ§
-            l1= l1->next;  //´«¤U¤@µ§
+            now->next=new ListNode(here%10);    //  æ–°æº–å‚™ä¸€å€‹æ–°çš„å€¼
+            now = now->next;    //æ›ä¸‹ä¸€ç­†
+            l1= l1->next;  //æ›ä¸‹ä¸€ç­†
             l2= l2->next;
         }
         return ans->next;
