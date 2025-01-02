@@ -2,8 +2,8 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode*ans=new ListNode(); //·Ç³Æ¦n·sªºµª®×
-        ListNode*now=ans; //²{¦b­n³B²zªºnode
+        ListNode*ans=new ListNode(); //æº–å‚™å¥½æ–°çš„ç­”æ¡ˆ
+        ListNode*now=ans; //ç¾åœ¨è¦è™•ç†çš„node
         while(l1!=nullptr){
             now->next=new ListNode(l1->val);
             now = now->next;
